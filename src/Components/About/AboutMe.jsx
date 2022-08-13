@@ -35,9 +35,8 @@ const AboutMe = () => {
                 <span className="tags"> &lt;/p&gt; <br/></span>
 
             </Col>
-            <Col className='' lg={5}>
+
               <Cloud />
-            </Col>
         </Row>
     </Container>
   )

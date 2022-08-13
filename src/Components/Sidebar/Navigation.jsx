@@ -39,11 +39,11 @@ const itemIds = [
   ]
    
 
-export const Navigation = () => {
+export const Navigation = (props) => {
     return(
         <motion.ul className='navigation-ul' variants={variants}>
             {itemIds.map(i => (
-            <MenuItem title={i.title} icon={i.icon} key={i.id} link={i.link} />
+            <MenuItem toggle={()=> props.toggle}  title={i.title} icon={i.icon} key={i.id} link={i.link} />
             ))}
 
             {/* <div className="my-4 d-flex justify-content-center mx-3"> 

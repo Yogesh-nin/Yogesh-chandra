@@ -1,10 +1,26 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import Loader from '../Components/Loader';
 import ProjectContainer from '../Components/Projects/ProjectContainer'
 const Work = () => {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 600);
+  }, []);
   return (
-    <div className="page-section">
-        <ProjectContainer />
-    </div>
+    <>
+    {
+      loading ? <Loader /> :
+      (
+        <div className="page-section">
+          <ProjectContainer />
+        </div>
+      )
+    }
+    </>
+    
   )
 }
 

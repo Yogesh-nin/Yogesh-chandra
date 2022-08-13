@@ -39,10 +39,13 @@ const Example = () => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
+      style={{width: isOpen ? '280px': '30px', height: isOpen ? '100%' : '30px'}}
     >
-      <motion.div className="background" variants={sidebar} />
-      <Navigation />
+      <motion.div className="background" variants={sidebar}>
+        <Navigation toggle={()=> toggleOpen()} />
+      </motion.div>
       <MenuToggle toggle={() => toggleOpen()} />
+      
     </motion.nav>
   );
 };

@@ -1,31 +1,20 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState} from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.css";
-import ButtonComponent from "../Button/ButtonComponent";
 import TrackVisibility from "react-on-screen";
+
 const ContactForm = () => {
   const initialState = { name: "", email: "", subject: "", message: "" };
   const [formData, setFormData] = useState(initialState);
   const [buttonText, setButtonText] = useState("Send Message!");
-  const [disable, setDisable] = useState(false);
-  const [isNameFilled, setIsNameFilled] = useState(true);
-  const [isEmailFilled, setIsEmailFilled] = useState(true);
-  const [isSubjectFilled, setIsSubjectFilled] = useState(true);
-  const [isMessageFilled, setIsMessageFilled] = useState(true);
 
   function resetForm() {
     setFormData({ name: "", email: "", subject: "", message: "" });
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.name.trim().length < 1) {
-      setIsNameFilled(false);
-      return;
-    } else {
       console.log(formData);
       setButtonText("Sending...");
-      setDisable(true);
       let response = await fetch("http://localhost:5000/send", {
         method: "POST",
         headers: {
@@ -36,27 +25,11 @@ const ContactForm = () => {
 
       resetForm();
       setButtonText("Send Message!");
-    }
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  useEffect(() => {
-    if (formData.name.trim().length < 1) {
-      setIsNameFilled(false);
-    }
-    if (formData.email.trim().length < 1) {
-      setIsEmailFilled(false);
-    }
-    if (formData.subject.trim().length < 1) {
-      setIsSubjectFilled(false);
-    }
-    if (formData.message.trim().length < 1) {
-      setIsMessageFilled(false);
-    }
-  }, [formData.name, formData.email, formData.subject, formData.message]);
 
   return (
     <Container className="section-division" style={{overflow:'hidden', position:'relative'}}>

@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useRef, useLayoutEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import TagCloud from 'TagCloud'
 import './index.css'
-
+import Col from 'react-bootstrap/Col'
 
 
 const Cloud = () => {
@@ -36,9 +36,11 @@ useEffect(() => {
 
   
   return (
-    <div className="Sphere d-md-flex justify-content-center d-none d-sm-block">
-      
-    </div>
+    <Col lg={5}>
+      <div className="Sphere d-md-flex justify-content-center d-none d-sm-block">
+        
+      </div>
+    </Col>
   )
 }
 

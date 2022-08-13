@@ -5,7 +5,7 @@
     border-radius: 0;
     font-size: 18px;
     padding: 10px 50px;
-
+    z-index: 25;
     background: linear-gradient(to right, #8A2BE2  50%,  #1D1D1D 50%);
     background-size: 200% 100%;
     background-position: right bottom;

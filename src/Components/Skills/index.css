@@ -1,0 +1,11 @@
+.skill-item{
+    width: 130px;
+    height: 130px;
+}
+
+@media (max-width: 576px){
+    .skill-item{
+        width: 100px;
+        height: 100px;
+    }
+}

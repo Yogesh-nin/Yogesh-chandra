@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -11,12 +11,6 @@ import mountainBack from '../../assets/mountains_behind.png'
 import mountainFront from '../../assets/mountains_front.png'
 import resume from '../../assets/resume.pdf'
 const Intro = () => {
-  // const starRef = useRef(null)
-  // const moonRef = useRef(null)
-  // const mountainBackRef = useRef(null)
-  // const mountainFrontRef = useRef(null)
-
-  
 
 useEffect(() => {
 
@@ -24,8 +18,6 @@ useEffect(() => {
   let moon = document.getElementById("moon");
   let mountains_back = document.getElementById("mountains_back");
   let mountains_front = document.getElementById("mountains_front");
-  let btn = document.getElementById("btn-letsgo");
-  let header = document.querySelector("header");
 
   window.addEventListener("scroll", () =>{
     let value = window.scrollY;
@@ -33,8 +25,6 @@ useEffect(() => {
     moon.style.top = value * 1.05 + "px";
     mountains_back.style.top = value * 0.5 + "px";
     mountains_front.style.top = value * 0 + "px";
-    // btn.style.marginTop = value * 1 + "px";
-    // header.style.top = value * 0.5 + "px";
   });
   
 });

@@ -9,7 +9,7 @@ import img4 from '../../assets/restaurant.png'
 import img5 from '../../assets/news-monkey.png'
 import img6 from '../../assets/js-quiz.png'
 import TrackVisibility from "react-on-screen";
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const projects = [
   {
@@ -53,7 +53,6 @@ const projects = [
 const ProjectContainer = () => {
 
   const location = useLocation();
-  let navigate = useNavigate();
   return (
     <div className='w-100' style={{overflow:'hidden', position:'relative'}}>
     <Container className="section-division">

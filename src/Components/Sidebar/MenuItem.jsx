@@ -18,13 +18,13 @@ const variants = {
   }
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 export const MenuItem = (props) => {
 
   const style = {padding: "4px 2px" };
   return (
     <motion.li className='navigation-li'
+    onClick={props.toggle()}
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
