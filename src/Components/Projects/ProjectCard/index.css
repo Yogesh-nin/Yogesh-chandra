@@ -1,3 +1,26 @@
+.big-fake{
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    left: 48vw;
+    z-index: -1;
+    font-size: 20rem;
+    color: rgba(255, 255, 255, 0.04);
+    font-weight: 700;
+    /* overflow: hidden; */
+}
+@media (max-width:992px){
+    .big-fake{
+        font-size: 15rem;
+        left: 30vw;
+    }
+}
+
+@media (max-width: 576px){
+    .big-fake{
+        display: none;
+    }
+}
+
 .image{
     display: block;
     width: 100%;

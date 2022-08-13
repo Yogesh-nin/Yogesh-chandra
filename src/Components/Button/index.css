@@ -1,18 +1,18 @@
 .button{
     color: #ffffff;
     border: 2px solid #ffffff;
-    background-color: #2b1055;
+    background-color: #8A2BE2;
     border-radius: 0;
     font-size: 18px;
     padding: 10px 50px;
 
-    background: linear-gradient(to right, #2b1055  50%, transparent 50%);
+    background: linear-gradient(to right, #8A2BE2  50%,  #1D1D1D 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .3s ease-in-out;
 }
 
-.button:hover, .button:focus{
+.button:hover{
     /* background-color: #2b1055; */
     color: #ffffff;
     border: 2px solid #ffffff;

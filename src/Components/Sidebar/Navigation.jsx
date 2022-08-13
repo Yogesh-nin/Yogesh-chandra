@@ -11,13 +11,39 @@ const variants = {
   }
 };
 
-const itemIds = ["home", "about", "skills", "work", "contact"];
+const itemIds = [
+  {
+    id: 0,
+    title: "Home",
+    icon: "fa-solid fa-house-chimney",
+    link: '/'
+   },
+  {
+    id: 1,
+    title: "About",
+    icon: "fa-solid fa-user",
+    link: '/about'
+   },
+  {
+    id: 2,
+    title: "Work",
+    icon: "fa-solid fa-briefcase",
+    link: '/work'
+   },
+  {
+    id: 3,
+    title: "Contact",
+    icon: "fa-solid fa-envelope-open",
+    link: '/contact'
+   },
+  ]
+   
 
 export const Navigation = () => {
     return(
         <motion.ul className='navigation-ul' variants={variants}>
             {itemIds.map(i => (
-            <MenuItem i={i} key={i} />
+            <MenuItem title={i.title} icon={i.icon} key={i.id} link={i.link} />
             ))}
 
             {/* <div className="my-4 d-flex justify-content-center mx-3"> 

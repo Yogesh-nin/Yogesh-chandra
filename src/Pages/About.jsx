@@ -3,7 +3,7 @@ import AboutMe from '../Components/About/AboutMe'
 
 const About = () => {
   return (
-    <div className="vh-100 d-flex align-items-center">
+    <div className="d-flex page-section align-items-center">
         <AboutMe />
     </div>
   )

@@ -55,8 +55,12 @@ const ProjectContainer = () => {
   const location = useLocation();
   let navigate = useNavigate();
   return (
-    <Container>
-        <Row className="d-flex justify-content-between">
+    <div className='w-100' style={{overflow:'hidden', position:'relative'}}>
+    <Container className="section-division">
+          <div className="big-fake">Work</div>
+        <Row className="d-flex justify-content-between align-items-center">
+          <Col md={4}>
+        <span className="tags"> &lt;h2&gt;</span>
         <TrackVisibility>
             
             {({isVisible})=>
@@ -74,14 +78,24 @@ const ProjectContainer = () => {
             </h2>
             }
             </TrackVisibility>
-            <Col lg={6}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt distinctio laborum corporis sunt laboriosam dolores officia cum maxime fuga!</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt distinctio laborum corporis sunt laboriosam dolores officia cum maxime fuga!</p>
-            </Col>
-            {
-            (location.pathname==='/' && <Col lg={3}>
+           <span className="tags"> &lt;/h2&gt;</span>
+           </Col>
+           {
+            (location.pathname==='/' && <Col md={4} lg={3}>
               <ButtonComponent name="See more..." route="/work"/>
             </Col>)}
+            </Row>
+
+            <Row>
+            <Col lg={6}>
+              <span className="tags"> &lt;p&gt;</span>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt distinctio laborum corporis sunt laboriosam dolores officia cum maxime fuga!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt distinctio laborum corporis sunt laboriosam dolores officia cum maxime fuga!</p>
+              <span className="tags"> &lt;/p&gt;</span>
+
+            </Col>
+            
             </Row>
             <Row>
 
@@ -92,6 +106,7 @@ const ProjectContainer = () => {
             }
             </Row>
     </Container>
+    </div>
   )
 }
 

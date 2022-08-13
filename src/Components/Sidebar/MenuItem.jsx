@@ -20,21 +20,17 @@ const variants = {
 
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
-export const MenuItem = ({ i }) => {
+export const MenuItem = (props) => {
 
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-  const style = { border: "2px solid red", padding: "4px 2px" };
+  const style = {padding: "4px 2px" };
   return (
     <motion.li className='navigation-li'
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      {/* <div className="icon-placeholder" style={style} /> */}
-    <div className="text-placeholder" style={style}><Link to={i === 'home' ? '': i}>{capitalizeFirstLetter(i)}</Link> </div>
+      <div className="icon-placeholder d-flex align-items-center justify-content-center" style={style}><i class={`${props.icon} fs-5`}></i></div>
+    <div className="text-placeholder" style={style}><Link to={props.link}>{props.title}</Link> </div>
     </motion.li>
   );
 };

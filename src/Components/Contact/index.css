@@ -11,7 +11,7 @@
     outline: none !important;
     box-shadow: none;
     color: #ffffff;
-    border-bottom: 2px solid #08FDD8;
+    border-bottom: 2px solid #8A2BE2;
     /* transition: border-bottom 0.5s ease-in-out; */
 }
 
@@ -20,12 +20,14 @@
 }
 
 .upper-icon i{
-    color: #08FDD8;
+    color: #8A2BE2;
+    margin-right: 15px;
 }
 
 .upper-icon-title{
     font-size: 15px;
     line-height: 21px;
+    color: #8d8d8d;
 }
 .upper-icon-content{
     font-size: 15px;
@@ -50,10 +52,10 @@
 .social-links a{
     display: block;
     background-color: transparent;
-    border: 2px solid #08FDD8;
+    border: 2px solid #8A2BE2;
     width: 36px;
     height: 36px;
-    color: #08FDD8;
+    color: #8A2BE2;
     font-size: 16px;
     line-height: 34px!important;
     margin-right: 4px;
@@ -63,6 +65,6 @@
 }
 
 .social-links a:hover{
-    background-color: #08FDD8 !important;
+    background-color: #8A2BE2 !important;
     color: #1D1D1D;
 }

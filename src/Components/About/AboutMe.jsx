@@ -6,9 +6,10 @@ import TrackVisibility from 'react-on-screen';
 import Cloud from '../Cloud';
 const AboutMe = () => {
   return (
-    <Container className="">
+    <Container className="section-division">
         <Row className='d-flex justify-content-between'>
             <Col lg={5}>
+              <span className="tags">&lt;h2&gt; </span>
               <TrackVisibility>
                 {({isVisible})=> 
                 <h2 aria-labelledby='Me, Myself and I' className={`section-heading txt-blue ${isVisible ? "text-animation" : ""}`}>
@@ -25,10 +26,14 @@ const AboutMe = () => {
                   <span className="blast">I</span>
                 </h2>}
                 </TrackVisibility>
+                <span className="tags"> &lt;/h2&gt; <br/></span>
 
+                <span className="tags"> &lt;p&gt;</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint similique ullam corporis laborum quaerat repudiandae at obcaecati commodi eius possimus fugit, quidem enim accusantium odit?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolor ipsam, odio unde tenetur voluptatum quam necessitatibus accusantium.</p>
+                <span className="tags"> &lt;/p&gt; <br/></span>
+
             </Col>
             <Col className='' lg={5}>
               <Cloud />

@@ -18,6 +18,7 @@ const openProject = () =>{
     <>
     <ProjectModal show={modalShow} onHide={() => setModalShow(false)} />
     <Col md={6} lg={4}>
+
       <TrackVisibility>
         {({ isVisible }) => (
           <div
@@ -54,6 +55,7 @@ const openProject = () =>{
           </div>
         )}
       </TrackVisibility>
+
     </Col>
     </>
   );

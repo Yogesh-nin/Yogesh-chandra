@@ -66,7 +66,7 @@
   
   .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #08FDD8;
+    color: #8A2BE2;
   }
   
   .sidebar-nav li a:active,
@@ -94,7 +94,7 @@
   }
 
   .social-link-item:hover{
-    color: #08FDD8;
+    color: #8A2BE2;
   }
   
   @media (min-width: 991px) {
@@ -130,20 +130,23 @@
     bottom: 0;
     width: 280px;
     z-index: 25;
+   /* overflow: auto; */
   }
   
   .background {
     position: absolute;
-    z-index: 20;
+    z-index: 25;
     top: 0;
     left: 0;
     bottom: 0;
     width: 280px;
     background: rgba(24,24,24, 0.89);
+   /* overflow: auto; */
+
   }
   
   .sidebar-btn {
-    z-index: 20;
+    z-index: 25;
     outline: none;
     border: none;
     user-select: none;
@@ -157,14 +160,14 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: transparent;
+    background: #ffffff;
   }
   
   .navigation-ul,
   .navigation-li {
     margin: 0;
     padding: 0;
-    z-index: 25;
+    z-index: 30;
   }
   
   .navigation-ul {
@@ -181,7 +184,7 @@
     align-items: center;
     cursor: pointer;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4); */
   }
   
   .navigation-li a {
@@ -190,16 +193,19 @@
     color: #999999;
   }
   
-  .navigation-li a:hover {
+  .navigation-li:hover a {
     text-decoration: none;
-    color: #08FDD8;
+    color: #8A2BE2;
   }
   
   .navigation-li a:active,
   .navigation-li a:focus {
     text-decoration: none;
   }
+.navigation-li:hover .icon-placeholder{
+  color: #8A2BE2;
 
+}
   .icon-placeholder {
     width: 40px;
     height: 40px;
@@ -229,4 +235,10 @@
     align-items: center;
     cursor: pointer;
   }
+
+  /* @media (max-width: 768px) and (orientation: landscape){
+    .navigation-li{
+      margin-bottom: 0px;
+    }
+  } */
   

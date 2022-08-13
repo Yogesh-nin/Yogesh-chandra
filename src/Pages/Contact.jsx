@@ -3,7 +3,7 @@ import ContactForm from '../Components/Contact/ContactForm'
 
 const Contact = () => {
   return (
-    <div className="vh-100 w-100 d-flex align-items-center">
+    <div className="w-100 page-section d-flex align-items-center">
         <ContactForm />
     </div>
   )

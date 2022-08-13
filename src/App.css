@@ -1,11 +1,12 @@
 .txt-blue{
-  color: #08FDD8;
+  color: #8A2BE2;
 }
 
 .section-heading{
     font-family: 'Playfai Display', serif;
     font-weight: 600;
     font-size: 50px;
+    line-height: 1.1;
 }
 
 @media (max-width: 768px){
@@ -30,4 +31,24 @@ canvas {
   width: 100vw;
   height: 100vh;
   overflow: auto;
+}
+
+.section-division{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.page-section h2{
+  margin-top: 50px;
+}
+
+.tags{
+  color: #515152;
+  position: relative;
+  /* left: 2rem; */
+  font-style: italic;
+  font-size: 1.1rem;
+  font-family: 'La Belle Aurore',cursive;
+  
 }

@@ -9,7 +9,7 @@
 
 
 .sub-heading{
-    font-size: 28px;
+    font-size: 24px;
     color: #8d8d8d;
     line-height: 24px;
 }
@@ -24,10 +24,14 @@
     display: inline-block;
 }
 .blast:hover{
-    color: #08fDD8;
     animation: animate 0.6s;
     transition: all 0.3s ease-in-out;
     /* transition: all 0.2s cubic-bezier(0.4, 0.91, 1, 1); */
+}
+
+.hover-red:hover{
+  color: #F16775;
+  transition: all 0.3s ease-in-out;
 }
 
 @keyframes animate{
@@ -75,7 +79,7 @@
     height: 100px;
     width: 100%;
     background: linear-gradient(to top, #1c0522, transparent);
-    z-index: 1000;
+    z-index: 20;
   }
   
   .home-section img {
@@ -133,5 +137,24 @@
     .home-section{
       padding: 45px;
     }
+  }
+
+  @media (max-width: 480px){
+    .main-heading{
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .sub-heading{
+      font-size: 18px;
+    }
+
+    .home-section{
+      padding: 30px;
+    }
+
+    .text-animation{
+      width: 260px;
+    }
+  
   }
   

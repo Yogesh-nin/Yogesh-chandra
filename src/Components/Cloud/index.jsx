@@ -3,10 +3,11 @@ import TagCloud from 'TagCloud'
 import './index.css'
 
 
+
 const Cloud = () => {
 
   const effectRan = useRef(false)
-
+  
     const Texts = [
         'HTML', 'CSS', 'Javascript',
         'React', 'Bootstrap', 'Node',
@@ -35,7 +36,7 @@ useEffect(() => {
 
   
   return (
-    <div className="Sphere d-flex">
+    <div className="Sphere d-md-flex justify-content-center d-none d-sm-block">
       
     </div>
   )
