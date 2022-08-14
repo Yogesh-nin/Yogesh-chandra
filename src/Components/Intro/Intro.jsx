@@ -10,6 +10,8 @@ import moonImg from '../../assets/moon.png'
 import mountainBack from '../../assets/mountains_behind.png'
 import mountainFront from '../../assets/mountains_front.png'
 import resume from '../../assets/resume.pdf'
+import ScrollDownLeft from "../scroll-down/ScrollDownLeft";
+import ScrollDownRight from "../scroll-down/ScrollDownRight";
 const Intro = () => {
 
 useEffect(() => {
@@ -71,12 +73,13 @@ useEffect(() => {
             <span className="blast hover-red">r</span>
           </h1>}
           </TrackVisibility>
-        <h3 className="sub-heading">Front End Web Developer</h3>
+        <h3 className="sub-heading">Front End Web Developer / React Developer</h3>
         <Button href={resume} target="_blank"  className='button my-4'>My resume!</Button>
         </Col>
 
       </Row>
-      
+      <ScrollDownLeft />
+      <ScrollDownRight />
     </section>
     </Container>
   );

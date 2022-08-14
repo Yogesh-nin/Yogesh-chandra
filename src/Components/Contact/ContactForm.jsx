@@ -35,7 +35,7 @@ const ContactForm = () => {
     <Container className="section-division" style={{overflow:'hidden', position:'relative'}}>
       <div className='big-fake'>@</div>
     <span className="tags"> &lt;h2&gt;</span>
-      <TrackVisibility>
+      <TrackVisibility once>
         {({ isVisible }) => (
           <h2
             aria-labelledby="Contact me"
@@ -105,13 +105,6 @@ const ContactForm = () => {
                 </div>
               </div>
             </div>
-            {/* <div style={{width: "60%"}}>
-              <div className="d-flex justify-content-center contact-social-links">
-                <span className="social-links"> </span>
-                <span className="social-links"> </span>
-                <span className="social-links"> </span>
-              </div>
-            </div> */}
 
             <div className="contact-social-links d-flex">
               <ul className="social-links text-center">
@@ -125,12 +118,12 @@ const ContactForm = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/yogesh-chandra-sharma-59147b201/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/chandra_yogesh.0_0/?hl=en" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>
@@ -140,7 +133,7 @@ const ContactForm = () => {
         </Col>
 
         <Col className="my-2" lg={6}>
-          <Form onSubmit={handleSubmit}>
+          <Form className='animated animatedFadeInUp fadeInUp' onSubmit={handleSubmit}>
             <Row>
               <Col lg={6}>
                 <Form.Group className="mb-3" controlId="formBasicName">

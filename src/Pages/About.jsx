@@ -5,6 +5,8 @@ import Cloud from "../Components/Cloud";
 import Skills from "../Components/Skills";
 import TrackVisibility from "react-on-screen";
 import Loader from "../Components/Loader";
+import ScrollDownLeft from "../Components/scroll-down/ScrollDownLeft";
+import ScrollDownRight from "../Components/scroll-down/ScrollDownRight";
 const About = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -20,7 +22,7 @@ const About = () => {
       ) : (
         <div className="page-section section-division">
           <Container>
-            <TrackVisibility>
+            <TrackVisibility once>
               {({ isVisible }) => (
                 <h2
                   aria-labelledby="Me, Myself and I"
@@ -46,6 +48,8 @@ const About = () => {
               <PersonalInfo />
               <Cloud />
             </Row>
+            <ScrollDownLeft />
+            <ScrollDownRight/>
           </Container>
           <Skills />
         </div>

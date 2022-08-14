@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <div>
       <Container className="my-4">
-        <h2 className="text-center">My Skills</h2>
+        <h2 className="text-center mb-3">My Skills</h2>
         <Row>
           <Col
             className="d-flex flex-column align-items-center justify-content-center my-4"

@@ -1,2 +1,10 @@
 
+.para-link{
+    color: #8A2BE2;
+    text-decoration: none;
+    font-size: 18px;
+}
 
+.para-link:hover{
+    color: #563d7c;
+}

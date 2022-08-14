@@ -11,42 +11,56 @@ import img6 from '../../assets/js-quiz.png'
 import TrackVisibility from "react-on-screen";
 import { useLocation } from 'react-router-dom';
 
+import hotelModal from '../../assets/hotel-modal-img.png'
+import instaModal from '../../assets/instaverse-modal.png'
+import jsModal from '../../assets/js-quiz-modal.png'
+import restaurantModal from '../../assets/restaurant-modal.png'
+import newsModal from '../../assets/news-app-modal.png'
+import clinicModal from '../../assets/clinic-website-modal.png'
+
+
 const projects = [
   {
     image: img1,
     title: "Hotel Bhabha",
     description: "Hotel bhabha website",
-    tech: ["MERN", "Reactjs", "Bootstrap", "Express"]
+    tech: ["MERN", "Reactjs", "Bootstrap", "Express"],
+    modalImg: hotelModal 
   },
   {
     image: img2,
     title: "Instaverse",
     description: "A photo sharing app",
-    tech: ["MERN", "Reactjs", "material-ui", "Express"]
+    tech: ["MERN", "Reactjs", "material-ui", "Express"],
+    modalImg: instaModal
   },
   {
     image: img3,
     title: "Coochebehar polyclinic",
     description: "Website created for coochebehar polyclinic",
-    tech: ["HTML", "CSS", "Javascript", "Jquery"]
+    tech: ["HTML", "CSS", "Javascript", "Jquery"],
+    modalImg: clinicModal
   },
   {
     image: img4,
     title: "Con Fusion",
     description: "A restaurant website",
-    tech: ["HTML", "CSS", "Javascript", "Bootstrap"]
+    tech: ["HTML", "CSS", "Javascript", "Bootstrap"],
+    modalImg: restaurantModal
   },
   {
     image: img5,
     title: "NewsMonkey",
     description: "Get your daily dose of news",
-    tech: ["ReactJs", "Bootstrap", "News API"]
+    tech: ["ReactJs", "Bootstrap", "News API"],
+    modalImg: newsModal
   },
   {
     image: img6,
     title: "Javascript quiz",
     description: "A simple javascript quiz",
-    tech: ["Javascript", "HTML", "CSS"]
+    tech: ["Javascript", "HTML", "CSS"],
+    modalImg: jsModal
   },
 ]
 
@@ -57,10 +71,11 @@ const ProjectContainer = () => {
     <div className='w-100' style={{overflow:'hidden', position:'relative'}}>
     <Container className="section-division">
           <div className="big-fake">Work</div>
+          
         <Row className="d-flex justify-content-between align-items-center">
           <Col md={4}>
         <span className="tags"> &lt;h2&gt;</span>
-        <TrackVisibility>
+        <TrackVisibility once>
             
             {({isVisible})=>
              <h2 aria-labelledby="Contact me" className={`section-heading txt-blue ${isVisible ? "text-animation": ""}`}>

@@ -6,7 +6,7 @@ import './index.css'
 const PersonalInfo = () => {
   return (
     <Col lg={6}>
-        <h2>Personal Info</h2>
+        <h2 className="text-center mb-3">Personal Info</h2>
         <div className='d-flex justify-content-between'>
             <div className="left-div mr-2">
                 <div className='info-item'>

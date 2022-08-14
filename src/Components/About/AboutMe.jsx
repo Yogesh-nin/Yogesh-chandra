@@ -4,13 +4,14 @@ import './index.css'
 import 'animate.css'
 import TrackVisibility from 'react-on-screen';
 import Cloud from '../Cloud';
+import { Link } from 'react-router-dom'
 const AboutMe = () => {
   return (
     <Container className="section-division">
         <Row className='d-flex justify-content-between'>
             <Col lg={5}>
               <span className="tags">&lt;h2&gt; </span>
-              <TrackVisibility>
+              <TrackVisibility once>
                 {({isVisible})=> 
                 <h2 aria-labelledby='Me, Myself and I' className={`section-heading txt-blue ${isVisible ? "text-animation" : ""}`}>
                   <span className="blast">M</span>
@@ -32,6 +33,8 @@ const AboutMe = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint similique ullam corporis laborum quaerat repudiandae at obcaecati commodi eius possimus fugit, quidem enim accusantium odit?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolor ipsam, odio unde tenetur voluptatum quam necessitatibus accusantium.</p>
+
+                <span><Link className='para-link' to="./about">want to know more...</Link><br/></span>
                 <span className="tags"> &lt;/p&gt; <br/></span>
 
             </Col>
