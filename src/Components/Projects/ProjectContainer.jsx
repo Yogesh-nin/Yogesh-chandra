@@ -111,17 +111,21 @@ const ProjectContainer = () => {
             <Col lg={6}>
               <span className="tags"> &lt;p&gt;</span>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt distinctio laborum corporis sunt laboriosam dolores officia cum maxime fuga!</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt distinctio laborum corporis sunt laboriosam dolores officia cum maxime fuga!</p>
+              <p><strong>Skills grow. So will this portfolio</strong> </p>
+              <p>These are some projects I have build in past one year.</p>
               <span className="tags"> &lt;/p&gt;</span>
 
             </Col>
             
             </Row>
-            <Row className='d-block d-md-none'>
-              <ProjectSlider projects={projects} />
-            </Row>
-            <Row className="d-none d-md-flex">
+            {
+              location.pathname === '/' && (
+                <Row className='d-block d-md-none'>
+                  <ProjectSlider projects={projects} />
+                </Row>
+              )
+            }
+            <Row className={`${location.pathname==='/' ? 'd-none d-md-flex' : ''}`}>
             
             {
               projects.map((project_item, index)=>{

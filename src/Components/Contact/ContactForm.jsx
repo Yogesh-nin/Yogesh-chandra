@@ -16,7 +16,7 @@ const ContactForm = () => {
     e.preventDefault();
       console.log(formData);
       setButtonText("Sending...");
-      let response = await fetch("http://localhost:5000/send", {
+      let response = await fetch("https://yogesh-chandra-portfolio.herokuapp.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "Application/json;charset=utf-8",
@@ -58,8 +58,8 @@ const ContactForm = () => {
       </TrackVisibility>
       <span className="tags"> &lt;/h2&gt;</span>
 
-      <Row className="d-flex justify-content-between">
-        <Col md={5} className="d-flex align-items-center my-2">
+      <Row className="d-flex justify-content-around">
+        <Col md={6} lg={5} className="d-flex align-items-center my-2">
           <div>
             <span className="tags"> &lt;h3&gt;</span>
 
@@ -140,7 +140,7 @@ const ContactForm = () => {
           </div>
         </Col>
 
-        <Col className="my-2" lg={6}>
+        <Col className="my-2" md={6} lg={6}>
           <Form className='' onSubmit={handleSubmit}>
             <TrackVisibility once>
               {({isvisible})=>(

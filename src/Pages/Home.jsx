@@ -23,7 +23,7 @@ const Home = () => {
         <div>
           <Intro />
           <AboutMe />
-          <ProjectContainer />
+          <ProjectContainer id='home' />
           <ContactForm />
         </div>
       )

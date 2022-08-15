@@ -15,9 +15,9 @@ const ProjectModal = (props) => {
       // style={{background: "rgba(0,0,0,0.6)", boxSshadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;"}}
       // scrollable
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          {/* <Container className='modal-heading txt-blue'>
+      <Modal.Header className='modal-header' closeButton>
+        {/* <Modal.Title id="contained-modal-title-vcenter">
+          <Container className='modal-heading txt-blue'>
             <Row>
               <Col>
               <span className='modal-txt'>Title: {props.title}</span>
@@ -29,11 +29,10 @@ const ProjectModal = (props) => {
             <Row>
               <Col>Live: <a href={props.link} target="_blank" rel="noopener noreferrer">{props.link}</a></Col>
             </Row>
-          </Container> */}
-        </Modal.Title>
+          </Container>
+        </Modal.Title> */}
       </Modal.Header>
       <Modal.Body>
-        <h1>{props.title}</h1>
         <figure><img src={props.image} alt="" width="100%" /></figure>
       </Modal.Body>
       {/* <Modal.Footer>

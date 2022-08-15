@@ -31,8 +31,8 @@ const AboutMe = () => {
 
                 <span className="tags"> &lt;p&gt;</span>
                 <p>Hello there! I am Yogesh Chandra, a Mern Stack developer proficient in ReactJs. </p>
-                <p>Technology leads, society follows. The move towards increasing inclusivity and diversity in the industry through representation is of importance to me</p>
-                <p>I'm excited to make the leap and continue refining my skills with the right company.</p>
+                <p>Well-organised person, zealous, problem solver, person with high attention to details, fan of anime and TV series.</p>
+                <p>Intrested in frontend and backend spectrum and working on ambitious projects with positive people.</p>
 
                 <span><Link className='para-link' to="./about">want to know more...</Link><br/></span>
                 <span className="tags"> &lt;/p&gt; <br/></span>

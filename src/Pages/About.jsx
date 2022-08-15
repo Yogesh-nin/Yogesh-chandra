@@ -21,7 +21,7 @@ const About = () => {
         <Loader />
       ) : (
         <div className="page-section section-division">
-          <Container>
+          <Container className='my-4'>
             <TrackVisibility once>
               {({ isVisible }) => (
                 <h2
