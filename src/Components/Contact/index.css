@@ -32,6 +32,9 @@
 .upper-icon-content{
     font-size: 15px;
     line-height: 21px;
+    user-select: text;
+    cursor: pointer;
+    
 }
 
 .social-links{

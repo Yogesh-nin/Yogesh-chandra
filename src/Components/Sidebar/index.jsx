@@ -2,7 +2,6 @@ import React, { useState} from 'react'
 import './index.css'
 import {Link} from 'react-router-dom'
 import { Button, Offcanvas } from 'react-bootstrap'
-import Example from './Example'
 import { motion } from "framer-motion";
 
 const variantsUl = {
@@ -78,10 +77,7 @@ const Sidebar = () => {
       </Offcanvas.Body>
     </Offcanvas>
 
-
-          
     </div>
-    // <Example />
   )
 }
 

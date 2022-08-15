@@ -17,6 +17,7 @@ import jsModal from '../../assets/js-quiz-modal.png'
 import restaurantModal from '../../assets/restaurant-modal.png'
 import newsModal from '../../assets/news-app-modal.png'
 import clinicModal from '../../assets/clinic-website-modal.png'
+import ProjectSlider from './Project-Slider';
 
 
 const projects = [
@@ -25,42 +26,48 @@ const projects = [
     title: "Hotel Bhabha",
     description: "Hotel bhabha website",
     tech: ["MERN", "Reactjs", "Bootstrap", "Express"],
-    modalImg: hotelModal 
+    modalImg: hotelModal,
+    link: 'https://hotel-bhabha.vercel.app/'
   },
   {
     image: img2,
     title: "Instaverse",
     description: "A photo sharing app",
     tech: ["MERN", "Reactjs", "material-ui", "Express"],
-    modalImg: instaModal
+    modalImg: instaModal,
+    link: ''
   },
   {
     image: img3,
     title: "Coochebehar polyclinic",
     description: "Website created for coochebehar polyclinic",
     tech: ["HTML", "CSS", "Javascript", "Jquery"],
-    modalImg: clinicModal
+    modalImg: clinicModal,
+    link: 'https://yogesh-nin.github.io/clinic-website/'
   },
   {
     image: img4,
     title: "Con Fusion",
     description: "A restaurant website",
     tech: ["HTML", "CSS", "Javascript", "Bootstrap"],
-    modalImg: restaurantModal
+    modalImg: restaurantModal,
+    link: 'https://yogesh-nin.github.io/conFusion/'
   },
   {
     image: img5,
     title: "NewsMonkey",
     description: "Get your daily dose of news",
     tech: ["ReactJs", "Bootstrap", "News API"],
-    modalImg: newsModal
+    modalImg: newsModal,
+    link: ''
   },
   {
     image: img6,
     title: "Javascript quiz",
     description: "A simple javascript quiz",
     tech: ["Javascript", "HTML", "CSS"],
-    modalImg: jsModal
+    modalImg: jsModal,
+    link: 'https://yogesh-nin.github.io/javascript-Quiz/'
   },
 ]
 
@@ -111,11 +118,19 @@ const ProjectContainer = () => {
             </Col>
             
             </Row>
-            <Row>
-
+            <Row className='d-block d-md-none'>
+              <ProjectSlider projects={projects} />
+            </Row>
+            <Row className="d-none d-md-flex">
+            
             {
               projects.map((project_item, index)=>{
-                return <ProjectCard animate="animate__fadeInUp" {...project_item} />
+                return(
+                  <Col md={6} lg={4}>
+                    <ProjectCard animate="animate__fadeInUp" {...project_item} />
+                  </Col>
+
+                ) 
               })
             }
             </Row>

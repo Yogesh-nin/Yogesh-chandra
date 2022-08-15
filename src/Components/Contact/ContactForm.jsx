@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.css";
 import TrackVisibility from "react-on-screen";
+import ToolTips from "../ToolTips";
 
 const ContactForm = () => {
   const initialState = { name: "", email: "", subject: "", message: "" };
@@ -109,23 +110,30 @@ const ContactForm = () => {
             <div className="contact-social-links d-flex">
               <ul className="social-links text-center">
                 <li>
-                  <a
-                    href="http://github.com/Yogesh-nin/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                  </a>
+                  <ToolTips text='follow on github' position='bottom'>
+                    <a
+                      href="http://github.com/Yogesh-nin/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </ToolTips>
+                  
                 </li>
                 <li>
+                <ToolTips text='connect on Linkedin' position='bottom'>
                   <a href="https://www.linkedin.com/in/yogesh-chandra-sharma-59147b201/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-linkedin-in"></i>
                   </a>
+                  </ToolTips>
                 </li>
                 <li>
+                <ToolTips text='follow me on instagram' position='bottom'>
                   <a href="https://www.instagram.com/chandra_yogesh.0_0/?hl=en" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-instagram"></i>
                   </a>
+                  </ToolTips>
                 </li>
               </ul>
             </div>
@@ -133,33 +141,38 @@ const ContactForm = () => {
         </Col>
 
         <Col className="my-2" lg={6}>
-          <Form className='animated animatedFadeInUp fadeInUp' onSubmit={handleSubmit}>
-            <Row>
-              <Col lg={6}>
-                <Form.Group className="mb-3" controlId="formBasicName">
-                  <Form.Control
-                    className={`input-field`}
-                    type="text"
-                    placeholder="Name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </Form.Group>
-              </Col>
-              <Col lg={6}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Control
-                    className={`input-field`}
-                    type="email"
-                    placeholder="Email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
+          <Form className='' onSubmit={handleSubmit}>
+            <TrackVisibility once>
+              {({isvisible})=>(
+                  <Row className={`${isvisible ? 'animated animatedFadeInUp fadeInUp' : ''}`}>
+                  <Col lg={6}>
+                    <Form.Group className="mb-3" controlId="formBasicName">
+                      <Form.Control
+                        className={`input-field`}
+                        type="text"
+                        placeholder="Name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col lg={6}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Control
+                        className={`input-field`}
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+              )}
+            </TrackVisibility>
+            
             <Row>
               <Col>
                 <Form.Group className="mb-3" controlId="formBasicName">

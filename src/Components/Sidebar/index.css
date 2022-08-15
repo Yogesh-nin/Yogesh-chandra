@@ -253,6 +253,7 @@
 }
 
 
+
 .offcanvas-btn, .offcanvas-btn:focus, .offcanvas-btn:active, .offcanvas-btn:hover{
   color: #ffffff;
   background-color: transparent;
@@ -282,7 +283,7 @@
     margin-left: 5px;
     margin-right: 5px;
     font-size: 18px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #282828;
 }
 
 .sidebar-item a{

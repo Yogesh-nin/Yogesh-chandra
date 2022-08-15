@@ -9,15 +9,10 @@ import ProjectModal from "../../Modal";
 const ProjectCard = (props) => {
 const [modalShow, setModalShow] = useState(false)
 
-const openProject = () =>{
-  setModalShow(true);
-  return <ProjectModal image={img} title="checking" show={modalShow} onHide={() => setModalShow(false)} />
-}
-
   return (
     <>
-    <ProjectModal show={modalShow} onHide={() => setModalShow(false)} />
-    <Col md={6} lg={4}>
+    <ProjectModal link={props.link} title={props.title} tech={props.tech} image={props.modalImg} show={modalShow} onHide={() => setModalShow(false)} />
+    <div>
 
       <TrackVisibility  once>
         {({ isVisible }) => (
@@ -44,7 +39,7 @@ const openProject = () =>{
         )}
       </TrackVisibility>
 
-    </Col>
+    </div>
     </>
   );
 };

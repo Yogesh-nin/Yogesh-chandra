@@ -3,6 +3,8 @@
     width: 100%;
     margin: 0px;
     background: linear-gradient(90deg, rgba(47,54,64,1) 23%, rgba(24,27,32,1) 100%);
+    overflow: hidden;
+    position: absolute;
 }
 
 .moon {
@@ -94,6 +96,16 @@
   .star5 {
     top: 20%;
     left: 30%;
+    animation-delay: 0.5s;
+  }
+  .star6 {
+    top: 25%;
+    left: 50%;
+    animation-delay: 0.5s;
+  }
+  .star7 {
+    top: 75%;
+    left: 70%;
     animation-delay: 0.5s;
   }
   
