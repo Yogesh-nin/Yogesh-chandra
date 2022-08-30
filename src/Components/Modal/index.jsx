@@ -36,7 +36,7 @@ const ProjectModal = (props) => {
       <Modal.Body>
         <div className="modal-txt d-flex justify-content-between px-2 mb-4">
           <span>Title: {props.title}</span>
-          <span>Live Project: <a href={props.link} target="_blank" rel="noopener noreferrer">{props.link}</a></span>
+          {props.link && <span>Live Project: <a href={props.link} target="_blank" rel="noopener noreferrer">{props.link}</a></span>}
         
         </div>
         <LazyLoadImage
