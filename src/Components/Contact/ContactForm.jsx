@@ -8,28 +8,50 @@ const ContactForm = () => {
   const initialState = { name: "", email: "", subject: "", message: "" };
   const [formData, setFormData] = useState(initialState);
   const [buttonText, setButtonText] = useState("Send Message!");
+  const inValidFields= {email: false, message: false}
+  const [errorEmail, setErrorEmail] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
   function resetForm() {
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData(initialState);
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
       console.log(formData);
-      setButtonText("Sending...");
-      let response = await fetch("https://yogesh-chandra-portfolio.herokuapp.com/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "Application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formData),
-      });
+      const isValid = formValidation();
+      if(isValid === true){
+        setButtonText("Sending...");
+        let response = await fetch("https://yogesh-chandra-portfolio.herokuapp.com/send", {
+          method: "POST",
+          headers: {
+            "Content-Type": "Application/json;charset=utf-8",
+          },
+          body: JSON.stringify(formData),
+        });
 
-      resetForm();
-      setButtonText("Send Message!");
+        resetForm();
+        setButtonText("Send Message!");
+      }
+      else{
+        if(inValidFields.email == true) setErrorEmail("warning")
+        if(inValidFields.message == true) setErrorMessage("warning")
+        
+      }
+      
   };
+
+  const formValidation = () =>{
+    if(formData.email == "") inValidFields.email = true
+    if(formData.message == "") inValidFields.message = true
+
+    if(inValidFields.email === true || inValidFields.message === true) return false
+    else return true;
+  }
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrorEmail("")
+    setErrorMessage("")
   };
 
   return (
@@ -154,18 +176,20 @@ const ContactForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
+                        
                       />
                     </Form.Group>
                   </Col>
                   <Col lg={6}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Control
-                        className={`input-field`}
+                        className={`input-field ${errorEmail}`}
                         type="email"
                         placeholder="Email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        
                       />
                     </Form.Group>
                   </Col>
@@ -183,6 +207,7 @@ const ContactForm = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    
                   />
                 </Form.Group>
               </Col>
@@ -190,7 +215,7 @@ const ContactForm = () => {
             <Row>
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Control
-                  className={`input-field `}
+                  className={`input-field ${errorMessage}`}
                   as="textarea"
                   rows={5}
                   placeholder="Message..."

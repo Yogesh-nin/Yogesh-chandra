@@ -35,7 +35,7 @@ const projects = [
     description: "A photo sharing app",
     tech: ["MERN", "Reactjs", "material-ui", "Express"],
     modalImg: instaModal,
-    link: ''
+    link: 'https://instaverse-project.vercel.app/'
   },
   {
     image: img3,

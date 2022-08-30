@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 import './index.css'
 const ProjectModal = (props) => {
 
@@ -33,7 +34,20 @@ const ProjectModal = (props) => {
         </Modal.Title> */}
       </Modal.Header>
       <Modal.Body>
-        <figure><img src={props.image} alt="" width="100%" /></figure>
+        <div className="modal-txt d-flex justify-content-between px-2 mb-4">
+          <span>Title: {props.title}</span>
+          <span>Live Project: <a href={props.link} target="_blank" rel="noopener noreferrer">{props.link}</a></span>
+        
+        </div>
+        <LazyLoadImage
+        alt=""
+        height="100%"
+        src={props.image} // use normal <img> attributes as props
+        width="100%"
+        effect="blur"
+        
+        />
+          {/* <figure><img src={props.image} alt="" width="100%" /></figure> */}
       </Modal.Body>
       {/* <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

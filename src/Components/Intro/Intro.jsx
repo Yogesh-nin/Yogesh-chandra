@@ -42,7 +42,7 @@ useEffect(() => {
         <img src={mountainFront} alt="Mountains front" id="mountains_front" />
         <Row className="w-100">
         <Col className="heading-container offset-lg-2">
-          <TrackVisibility>
+          <TrackVisibility once>
 
           {({isVisible})=>
            <h1 className={`main-heading ${isVisible ? "text-animation" : ""}`}>
