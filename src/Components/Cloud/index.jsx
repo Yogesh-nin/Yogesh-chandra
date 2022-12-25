@@ -15,7 +15,8 @@ const Cloud = () => {
         'C++', 'python', 'Java',
         'Go', 'Git', 'Github',
         "DBMS", "Machine Learning",
-        "SASS", "JSON", "npm", "SQL"
+        "SASS", "JSON", "npm", "SQL",
+        "Tailwind", "Nextjs"
     ]
     
 useEffect(() => {
